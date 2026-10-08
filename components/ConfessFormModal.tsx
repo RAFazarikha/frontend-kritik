@@ -88,9 +88,12 @@ export default function ConfessFormModal({
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
         className="max-h-full w-full max-w-md overflow-y-auto rounded-2xl border border-rose-100 bg-white p-6 shadow-2xl scrollbar-none [&::-webkit-scrollbar]:hidden"
       >
-        <h2 className="mb-4 text-xl font-bold text-rose-950">
+        <h2 className="text-xl font-bold text-rose-950">
           ✍️ Titip Confess Anonim
         </h2>
+        <h4 className="mb-4 text-sm font-light text-rose-950">
+          Curhatin aja yang bikin kepikiran, tumpahin secara anonim di sini. Jangan lupa set kategorinya & turn up the volume biar makin dapet feel-nya! 🎧✨
+        </h4>
 
         {error && <p className="mb-3 text-sm text-rose-500">{error}</p>}
 
