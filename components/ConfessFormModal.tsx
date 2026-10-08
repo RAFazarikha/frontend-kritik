@@ -20,7 +20,7 @@ export default function ConfessFormModal({
   onClose,
   onSaved,
 }: ConfessFormModalProps) {
-  const [from, setFrom] = useState<string>('');
+  const [from, setFrom] = useState<string>('Anonim');
   const [to, setTo] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   const [category, setCategory] = useState<string>('');
@@ -108,11 +108,9 @@ export default function ConfessFormModal({
             <input
               id="from"
               type="text"
-              placeholder="Anonymous"
-              value={from}
-              onChange={(e) => setFrom(e.target.value)}
-              className="w-full rounded-lg border border-stone-200 bg-stone-50 px-3 py-2 text-base text-stone-800 placeholder:text-stone-400 focus:border-rose-300 focus:outline-none focus:ring-2 focus:ring-rose-100"
-              required
+              value="Anonim"
+              disabled
+              className="w-full rounded-lg border border-stone-200 bg-stone-100 px-3 py-2 text-base text-stone-500 focus:border-rose-300 focus:outline-none focus:ring-2 focus:ring-rose-100 cursor-not-allowed"
             />
           </div>
 

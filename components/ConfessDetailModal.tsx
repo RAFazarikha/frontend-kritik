@@ -62,7 +62,7 @@ export default function ConfessDetailModal({
             <p className="mt-5 text-sm text-stone-500">
               Dari{' '}
               <span className="font-semibold text-stone-700">
-                {confess.from}
+                {confess.from === 'Anonim' ? 'A*****' : confess.from}
               </span>
             </p>
             <p className="mt-0.5 text-sm text-stone-500">

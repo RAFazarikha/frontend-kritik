@@ -101,7 +101,9 @@ export default function AdminConfessesPage() {
               </div>
               <div className="mt-4">
                 <p className="text-xs text-stone-500">
-                  Dari <span className="font-semibold text-stone-700">{c.from}</span>
+                  Dari <span className="font-semibold text-stone-700">
+                    {c.from === 'Anonim' ? 'A****m' : c.from}
+                  </span>
                 </p>
                 <p className="text-xs text-stone-500">
                   Untuk <span className="font-semibold text-stone-700">{c.to}</span>
@@ -165,7 +167,7 @@ export default function AdminConfessesPage() {
             </button>
             <h3 className="text-lg font-bold text-stone-900">Detail Confess</h3>
             <div className="mt-4 space-y-2 text-sm text-stone-600">
-              <p><strong>Dari:</strong> {selected.from}</p>
+              <p><strong>Dari:</strong> {selected.from === 'Anonim' ? 'A****m' : selected.from}</p>
               <p><strong>Untuk:</strong> {selected.to}</p>
               <p><strong>Kategori:</strong> {selected.category}</p>
               <p className="mt-2 whitespace-pre-wrap rounded-lg bg-stone-50 p-3 text-stone-800">

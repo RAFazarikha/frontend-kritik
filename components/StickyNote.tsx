@@ -28,7 +28,9 @@ export default function StickyNote({
     <motion.div
       role="button"
       tabIndex={0}
-      aria-label={`Buka confess dari ${note.from} untuk ${note.to}`}
+      aria-label={`Buka confess dari ${
+        note.from === 'Anonim' ? 'Anonim' : note.from
+      } untuk ${note.to}`}
       onClick={() => onNoteClick(note)}
       onKeyDown={handleKeyDown}
       style={{ transform: `rotate(${note.rotation ?? 0}deg)` }}
@@ -45,7 +47,7 @@ export default function StickyNote({
       <p className="mt-2 text-[11px] font-bold uppercase tracking-wider text-stone-500">
         From:{' '}
         <span className="font-semibold normal-case tracking-normal text-stone-700">
-          {note.from}
+          {note.from === 'Anonim' ? 'A*****' : note.from}
         </span>
       </p>
       <p className="text-[11px] font-bold uppercase tracking-wider text-stone-500">
